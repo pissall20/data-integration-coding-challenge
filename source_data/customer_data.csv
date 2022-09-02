@@ -1,0 +1,11 @@
+name,street_hn,city,annual_energy_consumption,aec_unit,peak_power,accounting_year
+envelio,Hildegard-von-bingen-allee 2,Köln,23000,kWh,30 kW,2021
+telekom,Landgrabenweg 151,Bonn,,,40 kW,2021
+früh,Am Hof 12-18,Köln,,,,
+e.on,Arnulfstraße 203,München,,,,
+deiters,Dr.-Gottfried-Cremer-Allee 19,Frechen,8000,kWh,,2021
+vw,Berliner Ring 2,Wolfsburg,1900000,MWh,500 MW,2019
+envelio,Hildegard-von-bingen-allee 2,Köln,25000,kWh,30 kW,2022
+Allianz Arena,Werner-Heisenberg-Allee 25,München,19000,MWh,5000 kW,2020
+düsseldorf airport,Flughafenstraße 105,Düsseldorf,88000,MWh,10 MW,2021
+Heidelberg-Cement,Berliner Straße 6,Heidelberg,900000,MWh,100 MW,2021

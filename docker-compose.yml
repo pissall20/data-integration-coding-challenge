@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/srv/recruiting/
+    ports:
+      - "8080:8080"
+    networks:
+      - backend_network
+    depends_on:
+      - postgres
+    entrypoint: ["tail", "-f", "/dev/null"]
+
+  postgres:
+    image: "postgres:13"
+    restart: always
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./backend/setup/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+    networks:
+      - backend_network
+
+volumes:
+  postgres_data: {}
+
+networks:
+  backend_network: {}
